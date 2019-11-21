@@ -1,6 +1,6 @@
-var path = require('path');
+let path = require('path');
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
-var webpack = require('webpack')
+let webpack = require('webpack')
 
 module.exports = {
     entry: {
@@ -8,7 +8,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, './dist'),
-        filename: '[name].js',
+        filename: 'MyComponent.js',
         library: 'MyComponent',
         libraryTarget: 'umd'
     },

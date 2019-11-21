@@ -6,22 +6,25 @@
 </head>
 <body>
 <div id="app">
-  <m-button :type="'warn'">nio</m-button>
+  <layout>
+    <m-button :type="'warn'">nio</m-button>
+  </layout>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
 <!--注意这里，这个就是你打包完之后的js文件，它会把你的组件放在一个叫MComponent的全局变量上-->
-<script src="../dist/index.js"></script>
+<script src="../dist/MyComponent.js"></script>
 <script>
   console.log(MyComponent);
-  const {MButton} = MyComponent;
+  const {MButton,Layout} = MyComponent;
   const app = new Vue({
     el:'#app',
     data:{
       text: 'hello vue!',
     },
     components:{
-      'm-button':MButton,
+      'MButton':MButton,
+      'Layout':Layout
     }
   })
 </script>
